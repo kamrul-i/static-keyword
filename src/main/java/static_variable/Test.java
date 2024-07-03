@@ -3,26 +3,20 @@ package static_variable;
 public class Test {
 
     public static void main(String[] args) {
-
         //এখানে ২টি class use করা হয়েছে।। এই class থেকে অন্য class কে call করা হয়েছে।।
         
-        //non-static is related with object.
-        //non-static have to create the object and then declare it.
-        Student student = new Student();  //this line name is object create.
-        System.out.println("Name : " + student.name);
+        Students s1 = new Students("Kamrul islam", 101);
+        Students s2 = new Students("Islam uddin", 102);
+        Students s3 = new Students("Rahim uddin", 103);
+        Students s4 = new Students("jahidul islma", 104);
 
-        //"static" is related with class, not object.
-        //"static" has to declare by class name.
-        System.out.println("Institute name : " + Student.institute_name);
+        s1.displayInformation();
+        s2.displayInformation();
+        s3.displayInformation();
+        s4.displayInformation();
     }
+    //"static" keyword is used form memory management. it makes the program more efficient by saving memory.
+    //এখানে কোন object এর সাথে "jamia al-safa" কে add করা হয় নাই, শুধু name & id add করা হয়েছে।।
+    //তবুও method সকল object এর সাথে "jamia al-safa" কে print করে দেখাবে, এটাই static এর সুবিধা।।
 
-    /*
-    Why use "static keyword" ?
-    "static" keyword is used form memory management. it makes the program more efficient by saving memory.
-        
-    static keyword can't be declared as local variable.
-    "static" keyword can be used before variable.
-    "static" keyword can be used before method.
-    "static" keyword can be used before block.
-     */
 }
